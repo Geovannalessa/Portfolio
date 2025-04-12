@@ -1,4 +1,3 @@
-
 body{
   background: linear-gradient(#ffffff,  #ffffff,#f9fcff);
   font-family: "Nobile", sans-serif;
@@ -31,8 +30,15 @@ nav ul {
 nav a {
   font-size: 13px;
   text-decoration: none;
-  color: #000;
+  color: #626060;
   font-weight: 500;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: #00a8eb;
+  text-decoration: underline;
+  transition: 0.4s;
 }
 
 .menu-e-logo > button{
@@ -80,17 +86,16 @@ h1{
 }
 
 #habilidades> li:hover{
-  background-color: #b100d8;
+  background-color: #3a5e94;
   transition: 0.5s;
   color: white;
 }
 
 #descricao{
   margin-top: 70px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   text-align: justify;
-  font-family: "Alike", serif;
 }
 
 #imagem-profissional{
@@ -115,6 +120,8 @@ h1{
 .flor{
   width: 20px;
   height: 20px;
+  background-image: url('../img/flor-titulo-escuro.svg');
+  background-size: cover;
 }
 
 #projetos> ul{
@@ -165,6 +172,7 @@ h1{
   object-fit: cover;
 }
 
+
 .info-projeto {
   width: 100%;
 }
@@ -172,18 +180,16 @@ h1{
 .titulo-projeto {
   font-size: 20px;
   color: #474c87;  
-  font-family: "Alike", serif;
 }
 
 .descricao-projeto {
   font-size: 14px;
   color: #555;
   margin-bottom: 10px;
-  font-family: "Alike", serif;
 }
 
 .ver-mais {
-  color: #e409b8;
+  color: #597f9f;
   display: flex;
   align-items: center;
   gap: 6px; 
@@ -191,16 +197,16 @@ h1{
   width: fit-content;
   margin-left: auto;
   font-size: 13px;
-  transition: background-color 0.3s ease;
+  transition: 0.5s;
 }
 
 .ver-mais:hover {
-  color: #b2bd19;
+  color: #2608ad;
 }
 
 .seta {
   margin-top: 15px;
-  width: 20px !important; /* ajuste fino */
+  width: 20px !important; 
   height: auto;
   display: block;
 }
@@ -218,7 +224,6 @@ h1{
 #contato{
   text-align: center;
   font-size: 14px;
-  font-family: "Alike", serif;
 }
 
 .contato a {
@@ -241,7 +246,7 @@ h1{
 }
 
 .contato a:hover {
-  background-color: #cefa66;
+  background-color: #509bba8b;
   transition: 0.5s;
 }
 
@@ -265,7 +270,6 @@ footer p {
   margin: 4px 0;
 }
 
-
 @media (max-width: 1024px) {
   body {
     margin: 0 5%;
@@ -273,11 +277,6 @@ footer p {
 
   nav ul {
     gap: 25px;
-  }
-
-  .card-projeto img {
-    width: 100%;
-    max-width: 50%;
   }
 
   .ver-mais {
@@ -353,12 +352,6 @@ footer p {
     text-align: center;
   }
 
-  .card-projeto img {
-    width: 80%;         
-    max-width: 350px;  
-    height: auto;       
-  }
-
   #habilidades {
     justify-content: center;
   }
@@ -371,7 +364,6 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(427px, 1fr));
   }
 
-  
   #habilidades> li{
     font-size: 11px;
   }
@@ -431,7 +423,6 @@ footer p {
     width: 100%;
     max-width: 62%;
   }
-
   .card-projeto .titulo-projeto {
     font-size: 20px;
   }
@@ -450,51 +441,116 @@ footer p {
   }
 }
 
-
 .mudaTema{
-  cursor: pointer;
-  width: 25px; 
-  border: solid rgb(255, 255, 255) 1px;
-  padding: 5px;
-  border-radius: 10px;
   transition: 0.5s;
+  cursor: pointer;
+  width: 20px; 
+  height: 20px;
+  background-image: url("../img/MoonFill.svg");
+  background-size: cover;
 }
 
 .mudaTema:hover {
-border: solid rgb(69, 69, 69) 1px;
-border-radius: 4px;
-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 4px;
+  filter: brightness(3) invert(0);
+}
+
+body.dark-mode .mudaTema{
+  transition: 0.5s;
+  background-image: url("../img/SunFill.svg");
+  background-size: cover;
+}
+
+body.dark-mode .mudaTema:hover{
+  transition: 0.5s;
+  filter: brightness(50%);
 }
 
 body.dark-mode{
-  background: linear-gradient(#212121,  #000226,#212121);
+  background: linear-gradient(#0c0c0c,#161515,#0c0c0c);
   color: #fff;
   transition: 0.5s;
 }
 
 body.dark-mode .menu-e-logo>nav>ul>li>a{ 
-  color: #f5f5f5;
+  color: #a19c9c;
+  transition: 0.5s;
+}
+
+body.dark-mode .menu-e-logo>nav>ul>li>a:hover { 
+  color: #f7f7f7;
   transition: 0.5s;
 }
 
 body.dark-mode .card-projeto {
-  background-color: #00000041;
+  background-color: #0000002f;
+  border: solid #8d87901a 1px;
   color: #f5f5f5;
   transition: 0.5s;
 }
 
 body.dark-mode #habilidades>li{
-  background-color: #1e1e1e;
-  border: solid #a400fd 1px;
+  background-color: #060606;
+  border: solid #4d5a93 1px;
   color: #f5f5f5;
   transition: 0.5s;
 }
 
 body.dark-mode #habilidades> li:hover{
-  background-color: #b100d8;
+  background-color: #214c6db1;
   transition: 0.5s;
   color: white;
   transition: 0.5s;
 }
+
+body.dark-mode .titulo-projeto {
+  font-size: 20px;
+  color: #ffffff;  
+}
+
+body.dark-mode .descricao-projeto {
+  color: #b8b2b2;
+}
+
+body.dark-mode .ver-mais:hover {
+  color: #a89bdf;
+}
+
+
+body.dark-mode .contato a {
+  background-color: #ffffffbc;
+  border: solid #585858 1px;
+  color: rgb(21, 20, 20);
+  box-shadow: 0 2px 6px rgba(178, 175, 175, 0.1);
+  transition: 0.5s;
+}
+
+body.dark-mode .contato a:hover {
+  background-color: #ffffff67;
+  transition: 0.5s;
+}
+
+body.dark-mode footer {
+  background-color: #00000041;
+  color: #f5f5f5;
+  border-top: 1px solid #0b0b0b;
+  transition: 0.5s;
+}
+
+body.dark-mode .flor{
+  background-image: url('../img/flor-titulo-branco.svg');
+  background-size: cover;
+  transition: 0.5s;
+}
+
+body.dark-mode .titulo {
+border:solid 1px rgb(72, 72, 72);
+}
+
+body.dark-mode .seta {
+  filter: brightness(1.3) contrast(1.1);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
