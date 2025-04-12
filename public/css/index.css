@@ -41,7 +41,7 @@ nav a:hover {
   transition: 0.4s;
 }
 
-.menu-e-logo > button{
+.menu-e-logo >div> button{
   background-color: transparent;
   border:none;
 }
@@ -50,6 +50,22 @@ nav a:hover {
   position: absolute;
   left: 50%;
   width: 30px; 
+}
+
+#btn-idioma{
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#btn-idioma:hover{
+  color: #00a8eb;
+  transition: 0.4s;
+}
+
+#funcionalidades{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 #sobre-mim{
@@ -289,28 +305,48 @@ footer p {
     font-size: 14px;
   }
 
-  nav ul {
-    gap: 25px;
-    padding: 0%;
-  }
-
   .menu-e-logo {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .menu-e-logo nav {
-    order: 2;
-  }
-
-  .menu-e-logo .logo {
-    order: 1;
-  }
-
-  .logo {
+    align-items: center;
     position: relative;
-    left: 0;
-    transform: none;
+    width: 100%;
+  }
+  
+  /* Linha de cima (logo centralizada + funcionalidades no canto direito) */
+  .menu-e-logo .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 30px; /* ajuste como preferir */
+    top: 0;
+    margin-top: 10px;
+  }
+  
+  /* Funcionalidades no canto superior direito */
+  #funcionalidades {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* A navegação fica abaixo de tudo */
+  .menu-e-logo nav {
+    margin-top: 80px; /* espaço para a logo e botões acima */
+  }
+  
+  .menu-e-logo nav ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   #sobre-mim {
@@ -466,6 +502,17 @@ body.dark-mode .mudaTema:hover{
   transition: 0.5s;
   filter: brightness(50%);
 }
+
+body.dark-mode #btn-idioma{
+  color: #a19c9c;
+  transition: 0.5s;
+}
+
+body.dark-mode #btn-idioma:hover{
+  color: #f7f7f7;
+  transition: 0.5s;
+}
+
 
 body.dark-mode{
   background: linear-gradient(#0c0c0c,#161515,#0c0c0c);
